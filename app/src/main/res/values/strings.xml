@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">zadanie baza danych</string>
+    <string name="Load">Load</string>
+    <string name="Find">Find</string>
+    <string name="Delete">Delete</string>
+    <string name="Update">Update</string>
+    <string name="add">Add</string>
+    <string name="hello">Hello!</string>
+    <string name="dodaj">Dodaj</string>
+</resources>

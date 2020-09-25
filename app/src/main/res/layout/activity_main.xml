@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#A3CFB4F6">
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is my Student Database"
+      android:layout_marginBottom="600dp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+       />
+
+
+
+
+    <EditText
+        android:id="@+id/studentID"
+        android:layout_width="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="80dp"
+        android:hint="Insert student index to add, delete \n or update"
+        app:layout_constraintTop_toBottomOf="@id/hello"
+        app:layout_constraintBottom_toTopOf="@id/studentName"
+        />
+    <EditText
+        android:id="@+id/studentName"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/studentID"
+        app:layout_constraintBottom_toTopOf="@id/vV3"
+        android:hint="Insert first name"
+        />
+    <EditText
+        android:id="@+id/vV3"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/studentName"
+        app:layout_constraintBottom_toTopOf="@id/btndelete"
+        android:hint="Insert surname"
+        />
+
+    <Button
+        android:id="@+id/btnload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="loadStudents"
+        android:text="Refresh database"
+        android:textStyle="bold
+"
+
+        app:layout_constraintBottom_toTopOf="@id/list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btndelete"
+         />
+
+    <Button
+        android:id="@+id/btnadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addStudent"
+        android:text="@string/add"
+        app:layout_constraintBottom_toTopOf="@id/btnload"
+        app:layout_constraintEnd_toStartOf="@id/btndelete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vV3"
+
+         />
+
+    <Button
+        android:id="@+id/btndelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="deleteStudent"
+        android:text="@string/Delete"
+        app:layout_constraintBottom_toTopOf="@id/btnload"
+        app:layout_constraintStart_toEndOf="@+id/btnadd"
+        app:layout_constraintEnd_toStartOf="@id/btnupdate"
+        app:layout_constraintTop_toBottomOf="@id/vV3"
+        />
+    <Button
+        android:id="@+id/btnupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="updateStudent"
+        android:text="@string/Update"
+        app:layout_constraintBottom_toTopOf="@id/btnload"
+        app:layout_constraintStart_toEndOf="@+id/btndelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vV3"
+        />
+
+    <TextView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:fadeScrollbars="false"
+        android:hint="Press REFRESH to show database"
+        android:scrollbars="vertical"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btndelete"
+        app:layout_constraintVertical_bias="0.64" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
